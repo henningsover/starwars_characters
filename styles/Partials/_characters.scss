@@ -1,0 +1,27 @@
+.characters {
+position: relative;
+z-index: 2;
+width: 70vw;
+height: 50vh;
+overflow: scroll;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(1, 2em);
+grid-gap: 20px;
+  .character {
+    // max-width: 150px;
+    font-size: 30px;
+    place-self: center;
+    color: #fee133;
+    &:hover {
+      cursor: pointer;
+      filter: brightness(80%);
+    }
+  }
+//   &:first-child {
+//     grid-row: 1/5;
+// order: 2;
+// grid-column-start: 2;
+//   }
+}

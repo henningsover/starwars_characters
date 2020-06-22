@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;400;700&display=swap" rel="stylesheet">
+  <title>Star Wars Characters</title>
+</head>
+
+<body>
+  <main class="main">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="img-wrapper">
+          <img src="./assets/swbanner-small.png" alt="Star Wars banner" srcset="">
+        </div>
+        <div class="search-wrapper">
+          <label for="search-field">Filter by name</label>
+          <input type="text" id="searchField" class="search-field" name="search-field">
+        </div>
+      </div>
+    </header>
+    <section id="characters" class="characters">
+    </section>
+    <div class="info hidden">
+      <button class="close-btn">Close</button>
+      <h3 class="info__name"></h3>
+      <ul>
+        <li><span class="info__birth"></span></li>
+        <li><span class="info__height"></span></li>
+        <li><span class="info__eyes"></span></li>
+        <li><span class="info__hair"></span></li>
+        <li><span class="info__homeworld"></span></li>
+      </ul>
+      <!-- <ul class="info__films">Films: </ul> -->
+    </div>
+  </main>
+  <footer></footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
