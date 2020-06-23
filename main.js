@@ -14,28 +14,9 @@ function getAllUrlPages() {
 }
 
 function loadCharacters() {
-  // for (let i = 1; i < 10; i++) {
-  //   let charactersUrlPage = charactersUrl + i
-  //   console.log(charactersUrlPage);
-  //   fetch(charactersUrlPage).then(function (response) {
-  //     return response.json();
-  //   }).then(function (data) {
-  //     let charactersResult = data.results
-  //     charactersResult.forEach(function (character) {
-  //       characters.push(character)
-  //     })
-  //     getAdditionalInfo(charactersResult)
-  //     drawCharacters(charactersResult)
-  //     console.log(characters)
-  //   }).catch(function (err) {
-  //     console.log('error', err);
-  //   })
-  // }
   Promise.all(charactersUrls.map(u => fetch(u))).then(responses =>
     Promise.all(responses.map(res => res.json()))
   ).then(results => {
-    // console.log(result)
-    // addCharacters(result)
     results.forEach(result => {
       let characterArr = result.results;
       characterArr.forEach(character => {

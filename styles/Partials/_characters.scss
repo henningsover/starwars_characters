@@ -1,22 +1,35 @@
 .characters {
 position: relative;
 z-index: 2;
-width: 70vw;
-height: 50vh;
+width: 90vw;
+height: 65vh;
 overflow: scroll;
 margin: auto;
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(1, 2em);
 grid-gap: 20px;
+@media(min-width: 1380px){
+  width: 70vw;
+  height: 50vh;
+  grid-template-columns: repeat(3, 1fr);
+}
   .character {
     // max-width: 150px;
-    font-size: 30px;
-    place-self: center;
+    font-size: 16px;
+    
     color: #fee133;
     &:hover {
       cursor: pointer;
       filter: brightness(80%);
+    }
+    @media(min-width: 540px){
+      font-size: 25px;
+      place-self: center;
+    }
+    @media(min-width: 940px){
+      font-size: 30px;
+      place-self: center;
     }
   }
 //   &:first-child {
